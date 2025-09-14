@@ -1,24 +1,59 @@
+import React, { useState } from "react";
 import "./quantityPicker.css";
-import { useState } from "react";
 
-function QuantityPicker() {
-  const [quantity, setQuantity] = useState(1);
+function QuantityPicker({ initialQuantity = 1, onQuantityChange, minQuantity = 1, maxQuantity = 99 }) {
+  const [quantity, setQuantity] = useState(initialQuantity);
 
-  function increase() {
-    setQuantity(quantity + 1);
-  }
-
-  function decrease() {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
+  const handleIncrease = () => {
+    if (quantity < maxQuantity) {
+      const newQuantity = quantity + 1;
+      setQuantity(newQuantity);
+      onQuantityChange && onQuantityChange(newQuantity);
     }
-  }
+  };
+
+  const handleDecrease = () => {
+    if (quantity > minQuantity) {
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      onQuantityChange && onQuantityChange(newQuantity);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const value = parseInt(e.target.value);
+    if (!isNaN(value) && value >= minQuantity && value <= maxQuantity) {
+      setQuantity(value);
+      onQuantityChange && onQuantityChange(value);
+    }
+  };
 
   return (
     <div className="quantity-picker">
-      <button onClick={decrease}>-</button>
-      <label>{quantity}</label>
-      <button onClick={increase}>+</button>
+      <button 
+        className="quantity-btn decrease" 
+        onClick={handleDecrease}
+        disabled={quantity <= minQuantity}
+      >
+        -
+      </button>
+      
+      <input
+        type="number"
+        className="quantity-input"
+        value={quantity}
+        onChange={handleInputChange}
+        min={minQuantity}
+        max={maxQuantity}
+      />
+      
+      <button 
+        className="quantity-btn increase" 
+        onClick={handleIncrease}
+        disabled={quantity >= maxQuantity}
+      >
+        +
+      </button>
     </div>
   );
 }
