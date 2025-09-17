@@ -1,0 +1,13 @@
+.home {
+    min-height: 400px;
+    background-color: #d7dcde;
+}
+.home h1 {
+    color: darkcyan;
+}
+
+.home .top-img {
+    width: 85%;
+    margin: 20px;
+    border-radius: 15px;
+}

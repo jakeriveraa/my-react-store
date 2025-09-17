@@ -3,17 +3,32 @@ import Navbar from "./components/navbar";
 import Catalog from "./pages/catalog";
 import Footer from "./components/footer";
 import "./App.css";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Admin from "./pages/admin";
+import Contact from "./pages/contact";
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   console.log("✅ App.jsx loaded");
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      <h1>My React Store</h1>
-      <Catalog />
+
+      <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/catalog" element={<Catalog />}></Route>
+      <Route path="/about" element={<About />}></Route>
+      <Route path="/admin" element={<Admin />}></Route>
+      <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
+    
+    
   );
 }
 

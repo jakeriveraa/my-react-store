@@ -3,7 +3,7 @@ var products = [
         id:1,//id is unique
         title:"ipear 14 pro",
         price:999,
-        image:"/images/smartphone.jpeg",
+        image:"/images/smartphone.png",
         category:"smartphones"
     },
     {
@@ -17,7 +17,7 @@ var products = [
         id:3,//id is unique
         title:"lenovo laptop",
         price:500,
-        image:"/images/laptop.jpeg",
+        image:"/images/laptopp.png",
         category:"computer"
     },
 ]
