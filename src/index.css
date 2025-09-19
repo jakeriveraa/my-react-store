@@ -1,11 +1,12 @@
-/* ----------------------------- */
-/* 🌐 Global Styles + Resets     */
-/* ----------------------------- */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -25,46 +26,6 @@ a {
   color: inherit;
 }
 
-/* ----------------------------- */
-/* 🧭 Navbar                     */
-/* ----------------------------- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
-  color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.navbar-menu a {
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar-menu a:hover {
-  color: #ffe600;
-}
-
-/* ----------------------------- */
-/* 📦 Catalog Page               */
-/* ----------------------------- */
 .catalog {
   padding: 40px;
   text-align: center;
@@ -88,9 +49,6 @@ a {
   margin-top: 20px;
 }
 
-/* ----------------------------- */
-/* 🛍️ Product Card               */
-/* ----------------------------- */
 .product-card {
   background: #fff;
   border-radius: 10px;
@@ -135,9 +93,6 @@ a {
   transform: scale(1.05);
 }
 
-/* ----------------------------- */
-/* 🔢 Quantity Picker            */
-/* ----------------------------- */
 .quantity-picker {
   display: flex;
   align-items: center;
@@ -159,9 +114,6 @@ a {
   background-color: #d6d6d6;
 }
 
-/* ----------------------------- */
-/* 📌 Footer                     */
-/* ----------------------------- */
 .footer {
   margin-top: 40px;
   padding: 20px;
@@ -176,36 +128,15 @@ a {
   font-size: 0.95rem;
 }
 
-/* ----------------------------- */
-/* 📱 Responsive Design          */
-/* ----------------------------- */
-
-/* Tablet View */
 @media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
   .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 
-/* Mobile View */
 @media (max-width: 600px) {
   .catalog {
     padding: 20px;
-  }
-
-  .navbar h1 {
-    font-size: 1.2rem;
   }
 
   .product-grid {

@@ -38,6 +38,11 @@ function Navbar({ cartItemCount = 0 }) {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/todo" className="nav-link">
+                To Do list
+              </Link>
+            </li>
           </ul>
         </div>
 

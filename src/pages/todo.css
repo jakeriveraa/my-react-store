@@ -1,4 +1,4 @@
-.coupons-form {
+.todo {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   max-width: 500px;
@@ -10,18 +10,19 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.coupons-form:hover {
+.todo:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(100, 108, 255, 0.15);
 }
 
-.coupons-form h3 {
+.todo h1 {
+  text-align: center;
   color: #646cff;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
 
-.form-group {
+.todo div {
   display: flex;
   align-items: center;
   margin: 10px 0;
@@ -35,7 +36,7 @@
   color: #333;
 }
 
-.form-control {
+.form-input {
   flex: 1;
   padding: 8px 10px;
   border: 1px solid #ccc;
@@ -43,18 +44,18 @@
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-control:focus {
+.form-input:focus {
   outline: none;
   border-color: #646cff;
   box-shadow: 0 0 6px rgba(100, 108, 255, 0.3);
 }
 
-.coupons-form .controls {
+.todo .controls {
   text-align: center;
   margin-top: 20px;
 }
 
-.button-43 {
+.btn-save {
   background: linear-gradient(135deg, #646cff, #747bff);
   border: none;
   color: #fff;
@@ -67,40 +68,30 @@
   box-shadow: 0 4px 14px rgba(100, 108, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.button-43:hover {
+.btn-save:hover {
   background: linear-gradient(135deg, #747bff, #646cff);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(100, 108, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.button-43:active {
+.btn-save:active {
   transform: translateY(0);
   box-shadow: 0 3px 10px rgba(100, 108, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.coupons-form .error {
-  color: red;
-  margin-bottom: 5px;
-
-  border: 1px solid rgb(87, 1, 1);
-  border-radius: 4px;
-  background-color: #f0f0b3;
-  padding: 5px;
-}
-
 /* Media Queries */
 @media (max-width: 768px) {
-  .coupons-form {
+  .todo {
     max-width: 95%;
     margin: 15px auto;
     padding: 15px;
   }
   
-  .coupons-form h3 {
+  .todo h1 {
     font-size: 1.3rem;
   }
   
-  .form-group {
+  .todo div {
     flex-direction: column;
     align-items: stretch;
     margin: 15px 0;
@@ -113,11 +104,11 @@
     margin-bottom: 5px;
   }
   
-  .form-control {
+  .form-input {
     width: 100%;
   }
   
-  .button-43 {
+  .btn-save {
     padding: 10px 24px;
     font-size: 14px;
     width: 100%;
@@ -125,22 +116,22 @@
 }
 
 @media (max-width: 480px) {
-  .coupons-form {
+  .todo {
     max-width: 100%;
     margin: 10px;
     padding: 12px;
   }
   
-  .coupons-form h3 {
+  .todo h1 {
     font-size: 1.2rem;
     margin-bottom: 12px;
   }
   
-  .form-group {
+  .todo div {
     margin: 12px 0;
   }
   
-  .button-43 {
+  .btn-save {
     padding: 12px 20px;
     font-size: 15px;
   }

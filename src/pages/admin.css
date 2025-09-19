@@ -1,0 +1,66 @@
+/* Admin Page Styles */
+.admin {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 30px;
+}
+
+.admin h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Parent Container */
+.parent {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .admin {
+    padding: 30px 15px;
+  }
+  
+  .admin h1 {
+    font-size: 32px;
+  }
+  
+  .parent {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .admin h1 {
+    font-size: 28px;
+  }
+  
+  .parent {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin {
+    padding: 20px 10px;
+  }
+  
+  .admin h1 {
+    font-size: 24px;
+  }
+  
+  .parent {
+    padding: 5px;
+  }
+}

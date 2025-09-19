@@ -7,6 +7,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Admin from "./pages/admin";
 import Contact from "./pages/contact";
+import Todo from "./pages/todo";
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -24,6 +25,7 @@ function App() {
       <Route path="/about" element={<About />}></Route>
       <Route path="/admin" element={<Admin />}></Route>
       <Route path="/contact" element={<Contact />}></Route>
+      <Route path="/todo" element={<Todo />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ProductsForm.css";
 
 function ProductsForm() {
+  const [allProducts, setAllProducts] = useState([]);
   const [product, setProduct] = useState({
     title: "",
     price: "",
@@ -30,7 +31,12 @@ function ProductsForm() {
 
   function save() {
     console.log(product);
+
+    let copy = [...allProducts];
+    copy.push(product);
+    setAllProducts(copy);
   }
+
 
   return (
     <div className="product-form">
@@ -56,6 +62,10 @@ function ProductsForm() {
           Save Coupon
         </button>
       </div>
+
+      <ul className="list">
+                {allProducts.map(prod => <li>{prod.title} - ${prod.price} </li> )}
+            </ul>
     </div>
   );
 }

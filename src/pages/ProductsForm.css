@@ -22,13 +22,13 @@
   font-size: 1.5rem;
 }
 
-.form-group {
+.product-form div {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
 
-.form-label {
+.product-form label {
   width: 100px;
   text-align: right;
   margin-right: 15px;
@@ -36,7 +36,7 @@
   color: #333;
 }
 
-.form-control {
+.product-form input {
   flex: 1;
   padding: 8px 10px;
   border: 1px solid #ccc;
@@ -44,18 +44,18 @@
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-control:focus {
+.product-form input:focus {
   outline: none;
   border-color: #646cff;
   box-shadow: 0 0 6px rgba(100, 108, 255, 0.3);
 }
 
-.controls {
+.product-form .controls {
   text-align: center;
   margin-top: 20px;
 }
 
-.btn-save {
+.product-form button {
   background: linear-gradient(135deg, #646cff, #747bff);
   border: none;
   color: #fff;
@@ -68,13 +68,71 @@
   box-shadow: 0 4px 14px rgba(100, 108, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.btn-save:hover {
+.product-form button:hover {
   background: linear-gradient(135deg, #747bff, #646cff);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(100, 108, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.btn-save:active {
+.product-form button:active {
   transform: translateY(0);
   box-shadow: 0 3px 10px rgba(100, 108, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .product-form {
+    max-width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+  
+  .product-form h3 {
+    font-size: 1.3rem;
+  }
+  
+  .product-form div {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 0;
+  }
+  
+  .product-form label {
+    width: 100%;
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .product-form input {
+    width: 100%;
+  }
+  
+  .product-form button {
+    padding: 10px 24px;
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-form {
+    max-width: 100%;
+    margin: 10px;
+    padding: 12px;
+  }
+  
+  .product-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .product-form div {
+    margin: 12px 0;
+  }
+  
+  .product-form button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
 }
