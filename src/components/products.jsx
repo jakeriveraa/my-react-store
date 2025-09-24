@@ -28,7 +28,7 @@ function Products({ dataprops, onAddToCart }) {
       onAddToCart(cartItem);
     }
     
-    alert(`Added ${quantity} x ${dataprops.title} to cart!\nTotal: $${total.toFixed(2)}`);
+  console.log("added to cart")
   };
 
   return (
